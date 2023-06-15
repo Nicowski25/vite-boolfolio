@@ -1,12 +1,12 @@
 <script>
     export default {
-        name: 'HomeView'
+        name: 'AboutView'
     }
 </script>
 
 <template>
     <div>
-<h1>Projects Home</h1>
+<h1>About Page</h1>
     </div>
 </template>
 
