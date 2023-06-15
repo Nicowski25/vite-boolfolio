@@ -1,13 +1,17 @@
 <script>
+import ProjectList from '../components/ProjectList.vue';
+
     export default {
-        name: 'HomeView'
-    }
+    name: "HomeView",
+    components: { ProjectList }
+}
 </script>
 
 <template>
-    <div>
-<h1>Projects Home</h1>
-    </div>
+
+<h1 class="text-center my-3">My Projects</h1>
+<ProjectList></ProjectList>
+
 </template>
 
 

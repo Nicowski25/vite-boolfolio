@@ -9,6 +9,7 @@ export default {
             loading: true,
             projects: null,
             error: null,
+            max_text_lenght : 50,
         }
     },
     methods: {
@@ -28,6 +29,12 @@ export default {
         /*         getImageFromPath(path) {
                     return this.base_url + 'storage/' + path;
                 } */
+        trucateText(text) {
+            if (text.length > this.max_text_lenght) {
+                return text.slice(0, this.max_text_lenght) + '...';
+            }
+            return text
+        },  
     },
     mounted() {
         const url = this.base_url + this.projects_API
@@ -38,7 +45,6 @@ export default {
 <template>
         <section class="projects" v-if="projects">
         <div class="container">
-            <h1 class="my-3">Projects</h1>
             <div class="row row-cols-2 row-cols-md-3">
                 <div class="col g-3" v-for="project in projects">
                     <div class="card">
@@ -49,7 +55,7 @@ export default {
                                 <h3>{{ project.title }}</h3>
                                 <p class="badge rounded-pill text-bg-primary m-0">{{project.status}}</p>
                             </div>
-                            <p> {{ project.description }} </p>
+                            <p> {{ trucateText(project.description) }} </p>
                             <p><strong>Expected weeks duration:</strong> {{ project.duration }}</p>
                             <p><strong>Start Date:</strong> {{ project.start_date }}</p>
                         </div>
