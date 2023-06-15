@@ -7,8 +7,8 @@ export default {
     },
     data() {
         return {
-            base_API: 'http://127.0.0.1:8000/',
-            projects_path: 'api/projects',
+            base_url: 'http://127.0.0.1:8000/',
+            projects_API: 'api/projects',
             loading: true,
             projects: null,
             error: null,
@@ -27,10 +27,13 @@ export default {
                 console.log(error);
                 this.error = error.message
             })
-        }
+        },
+/*         getImageFromPath(path) {
+            return this.base_url + 'storage/' + path;
+        } */
     },
     mounted() {
-        const url = this.base_API + this.projects_path
+        const url = this.base_url + this.projects_API
         this.getProejcts(url)
     }
 }
@@ -38,9 +41,9 @@ export default {
 </script>
 
 <template>
-    <section class="projects">
+    <section class="projects" v-if="projects">
         <div class="container">
-            <h1>Projects</h1>
+            <h1 class="my-3">Projects</h1>
             <div class="row row-cols-2 row-cols-md-3">
                 <div class="col g-3" v-for="project in projects">
                     <div class="card">
@@ -55,7 +58,9 @@ export default {
                             <p><strong>Expected weeks duration:</strong> {{ project.duration }}</p>
                             <p><strong>Start Date:</strong> {{ project.start_date }}</p>
                         </div>
-
+                        <div class="card-footer">
+                            <span class="badge bg-dark">{{project.id}}</span>
+                        </div>
                     </div>
                 </div>
             </div>
