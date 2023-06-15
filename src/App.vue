@@ -3,6 +3,7 @@ import axios from 'axios'
 
 export default {
     components: {
+
     },
     data() {
         return {
@@ -37,11 +38,26 @@ export default {
 </script>
 
 <template>
-    <section class="vue-home">
+    <section class="projects">
         <div class="container">
             <h1>Projects</h1>
-            <div class="row">
-            
+            <div class="row row-cols-2 row-cols-md-3">
+                <div class="col g-3" v-for="project in projects">
+                    <div class="card">
+
+                        <img class="card-img-top">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3>{{ project.title }}</h3>
+                                <p class="badge rounded-pill text-bg-primary m-0">{{project.status}}</p>
+                            </div>
+                            <p> {{ project.description }} </p>
+                            <p><strong>Expected weeks duration:</strong> {{ project.duration }}</p>
+                            <p><strong>Start Date:</strong> {{ project.start_date }}</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </section>
