@@ -10,12 +10,15 @@ export default {
 
 <template>
 
-    <AppHeader></AppHeader>
-    
-    <router-view></router-view>
+    <div class="d-flex">
+
+        <AppHeader></AppHeader>
+        
+        <router-view></router-view>
+
+    </div>
 
 </template>
 
 <style lang="scss">
-@use './assets/scss/style.scss';
 </style>
