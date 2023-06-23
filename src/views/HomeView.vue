@@ -1,28 +1,36 @@
 <script>
 import ProjectList from '../components/ProjectList.vue';
 import JumboHome from '../components/JumboHome.vue';
+import ProjectsView from './ProjectsView.vue';
 
 export default {
     name: "HomeView",
-    components: { 
+    components: {
         ProjectList,
-        JumboHome, 
+        JumboHome,
+        ProjectsView
     }
 }
 </script>
 
 <template>
-    <h1 class="text-center my-3">My Projects</h1>
-    <ProjectList></ProjectList>
-    <JumboHome></JumboHome>
+    <div class="d-flex flex-column">
+        <JumboHome></JumboHome>
+        <h1 class="text-center my-3 bg-white">My Projects</h1>
+        <ProjectList></ProjectList>
+    </div>
 </template>
 
 
-<style lang="scss">
-@use '../assets/scss/style.scss';
+<style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+@use '../assets/scss/partials/commons' as *;
 
 h1 {
-    color: $primary-dark;
+    color: $yellow;
 }
 
+.bg-white {
+    background-color: $greywhite;
+}
 </style>

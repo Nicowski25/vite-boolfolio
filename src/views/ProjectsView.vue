@@ -8,10 +8,18 @@ export default {
 </script>
 
 <template>
-<h1>Project Page</h1>
-<ProjectList></ProjectList>
+    <div class="bg p-3 h-100">
+        <h1>Project Page</h1>
+        <ProjectList class="py-3"></ProjectList>
+    </div>
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+@use '../assets/scss/partials/commons' as *;
+
+.bg {
+    background-color: $greywhite;
+}
 
 </style>
