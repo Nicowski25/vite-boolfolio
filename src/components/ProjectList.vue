@@ -43,14 +43,14 @@ export default {
 }
 </script>
 <template>
-    <section v-if="projects">
-        <div class="container">
-            <div class="row row-cols-2 row-cols-md-3">
-                <div class="col g-3" v-for="project in projects">
-                    <div class="card h-100">
+    <section v-if="projects" class="w-100 p-3">
+        <div class="container-fluid ">
+            <div class="row g-2">
+                <div class="col-6 my-2" v-for="project in projects">
+                    <div class="h-100 card mx-2">
 
-                        <img class="card-img-top">
-                        <div class="card-body">
+                        <!-- <img class="card-img-top"> -->
+                        <div class="card-body p-2">
                             <div class="d-flex justify-content-between align-items-center">
                                 <h3>{{ project.title }}</h3>
                                 <p class="badge rounded-pill text-bg-primary m-0">{{ project.status }}</p>
@@ -74,5 +74,18 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
 @use '../assets/scss/partials/commons' as *;
+
+section {
+    background-color: $black-light;
+}
+
+.card {
+    border: 1px solid $yellow;
+    background-color: $greywhite;
+    
+    h3 {
+        color: $yellow;
+    }
+}
 
 </style>

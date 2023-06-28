@@ -6,7 +6,7 @@ export default {
             // Initialising the canvas
             var ctx;
             var canvas = document.getElementById('matrix');
-                ctx = canvas.getContext('2d');
+            ctx = canvas.getContext('2d');
 
             // Setting the width and height of the canvas
             canvas.width = window.innerWidth;
@@ -54,11 +54,11 @@ export default {
 <template>
     <div id="jumbo" class="px-3">
         <canvas id="matrix"></canvas>
-            <h5 class="text-center primary-yellow pt-3">welcome to my portfolio</h5>
-            <h4 class="text-end ashgrey pt-5">Hi, my name is <span class="primary-yellow">Nicola Faedo</span></h4>
-            <h5 class="text-end ashgrey pt-5">I'm a</h5>
-            <h1 class="primary-yellow text-end">Full-Stack</h1>
-            <h1 class="primary-yellow big-title text-end">WEB DEV<span class="d-none d-md-inline">ELOPER</span></h1>
+        <h5 class="text-center primary-yellow welcome">welcome to my portfolio</h5>
+        <h4 class="text-end ashgrey pt-5">Hi, my name is <span class="primary-yellow">Nicola Faedo</span></h4>
+        <h5 class="text-end ashgrey pt-5">I'm a</h5>
+        <h1 class="primary-yellow text-end">Full-Stack</h1>
+        <h1 class="primary-yellow big-title text-end">WEB DEV<span class="d-none d-md-inline">ELOPER</span></h1>
     </div>
 </template>
 
@@ -71,6 +71,14 @@ export default {
     //background-color: $black-dark;
     //position: relative;
     background-color: rgba(20, 20, 20, 0.849);
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+}
+
+.welcome {
+    padding-top: 5rem;
 }
 
 .big-title {
@@ -90,12 +98,11 @@ export default {
 }
 
 #matrix {
-  position: fixed;
-  top: 0;
-  left: 10%;
-  width: 100%;
-  height: 90vh;
-  z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
 }
-
 </style>
