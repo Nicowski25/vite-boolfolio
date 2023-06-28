@@ -16,7 +16,7 @@ export default {
 <template>
     <div class="d-flex flex-column">
         <JumboHome></JumboHome>
-        <h1 class="text-center my-3 bg-white">My Projects</h1>
+        <h1 class="text-center py-2">My Projects</h1>
         <ProjectList></ProjectList>
     </div>
 </template>
@@ -28,9 +28,11 @@ export default {
 
 h1 {
     color: $yellow;
+    background-color: $black-light;
 }
 
 .bg-white {
     background-color: $greywhite;
 }
+
 </style>
