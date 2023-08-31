@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    //font-family: 'Raleway';
 //    font-family: 'Silkscreen', cursive;
 }
 
@@ -14,10 +15,14 @@
     list-style: none;
 }
 
-.color-grey {
-    color: $grey;
-}
-
 .vh-90 {
     height: 90vh;
+}
+
+.grey-color {
+    color: $grey1;
+}
+
+.orange-color {
+    color: #f85e2f;
 }
