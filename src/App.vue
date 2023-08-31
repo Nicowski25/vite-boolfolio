@@ -9,8 +9,7 @@ export default {
 </script>
 
 <template>
-    <div class="">
-        <AppHeader></AppHeader>
+    <div>
         <router-view class="router"></router-view>
     </div>
 </template>
