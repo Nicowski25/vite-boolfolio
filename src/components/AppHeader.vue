@@ -4,39 +4,37 @@ export default {
 }
 </script>
 
-
 <template>
-    <header class="shadow align-items-center z-i-1">
-        <div class="navbar align-items-center justify-content-center">
-            <div class="vertical-line flex-grow-1"></div>
-            <div class="d-flex justify-content-center align-items-center text-center mx-2">
-                <router-link class="nav-link side-links" :to="{ 'name': 'home' }" aria-current="page">Home</router-link>
-                <div class="vertical-line px-1"></div>
-                <router-link class="nav-link" :to="{ 'name': 'projects' }">Projects</router-link>
-                <div class="vertical-line px-1"></div>
-                <router-link class="nav-link" :to="{ 'name': 'about' }">About</router-link>
-                <div class="vertical-line px-1"></div>
-                <router-link class="nav-link" :to="{ 'name': 'contacts' }">Contacts</router-link>
+    <div class="d-flex justify-content-center">
+            <div class="container-fluid px-4">
+                <div class="row justify-content-between align-items-center">
+                    <!-- Logo left -->
+                    <div class="col-6">
+                        <img src="/logoinitials.png" style="width: 80px;" alt="">
+                    </div>
+                    <!-- Menu right -->
+                    <div class="col-6">
+                        <ul class="d-none d-sm-flex justify-content-end ls-none">
+                            <li>Works</li>
+                            <li>About</li>
+                            <li class="email-color fw-bold">nicola.faedo@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="vertical-line flex-grow-1"></div>
         </div>
-    </header>
 </template>
 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
 @use '../assets/scss/partials/commons' as *;
 
-.vertical-line {
-    border: 1px solid $yellow;
+li {
+    padding-right: 2rem;
+    color: $grey;
 }
 
-.nav-link {
-    padding: 0.5rem;
-    color: $yellow;
-}
-
-.z-i-1 {
-    z-index: 1;
+.email-color {
+    color: #ff8c42;
 }
 </style>
