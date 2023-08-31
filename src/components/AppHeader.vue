@@ -31,7 +31,7 @@ export default {
 
 li {
     padding-right: 2rem;
-    color: $grey;
+    color: $grey1;
 }
 
 .email-color {

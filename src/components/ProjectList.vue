@@ -13,32 +13,31 @@ export default {
         }
     },
     methods: {
-        getProejcts(url) {
-            axios
-                .get(url)
-                .then(response => {
-                    console.log(response);
-                    this.projects = response.data.projects
-                    this.loading = false
-                })
-                .catch(error => {
-                    console.log(error);
-                    this.error = error.message
-                })
-        },
-        /*         getImageFromPath(path) {
-                    return this.base_url + 'storage/' + path;
-                } */
         trucateText(text) {
             if (text.length > this.max_text_lenght) {
                 return text.slice(0, this.max_text_lenght) + '...';
             }
             return text
         },
+        getImageFromPath(path) {
+            //console.log(this.base_url + 'storage/' + path);
+            return this.base_url + 'storage/' + path;
+        },
     },
     mounted() {
         const url = this.base_url + this.projects_API
-        this.getProejcts(url)
+        axios
+            .get(url)
+            .then(response => {
+                console.log(response);
+                this.projects = response.data.projects
+                this.loading = false
+            })
+            .catch(error => {
+                console.log(error);
+                this.error = error.message
+            })
+
     }
 }
 </script>
@@ -49,7 +48,7 @@ export default {
                 <div class="col-6 my-2" v-for="project in projects">
                     <div class="h-100 card mx-2">
 
-                        <!-- <img class="card-img-top"> -->
+                        <img class="card-img-top" :src="getImageFromPath(project.image)">
                         <div class="card-body p-2">
                             <div class="d-flex justify-content-between align-items-center">
                                 <h3>{{ project.title }}</h3>
@@ -82,10 +81,9 @@ section {
 .card {
     border: 1px solid $yellow;
     background-color: $greywhite;
-    
+
     h3 {
         color: $yellow;
     }
 }
-
 </style>

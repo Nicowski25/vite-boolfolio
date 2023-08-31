@@ -9,7 +9,7 @@ export default {
 
 <template>
     <div class="bg p-3 h-100">
-        <h1>Project Page</h1>
+        <h1 class="pt-5">Project Page</h1>
         <ProjectList class="py-3"></ProjectList>
     </div>
 </template>
