@@ -3,13 +3,14 @@ import HomeView from './views/HomeView.vue';
 import AboutView from './views/AboutView.vue';
 import ContactsView from './views/ContactsView.vue';
 import ProjectsView from './views/ProjectsView.vue';
+import HomeView2 from './views/HomeView2.vue';
 const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
             'path' : '/',
             'name' : 'home',
-            'component' : HomeView
+            'component' : HomeView2
         },
         {
             'path' : '/about',
