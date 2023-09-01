@@ -9,7 +9,7 @@ export default {
         <div class="container-fluid px-4">
             <div class="row justify-content-between align-items-center">
                 <!-- Logo left -->
-                <div class="col-6">
+                <div class="col-12 col-sm-6 text-center text-sm-start">
                     <img src="/logoinitials.png" style="width: 80px;" alt="">
                 </div>
                 <!-- Menu right -->
@@ -37,5 +37,6 @@ a {
         color: white;
     }
 }
+
 
 </style>

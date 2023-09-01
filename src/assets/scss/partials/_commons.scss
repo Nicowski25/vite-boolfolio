@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@700&family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,600&display=swap');
 
 * {
     margin: 0;
@@ -24,5 +25,5 @@
 }
 
 .orange-color {
-    color: #f85e2f;
+    color: $orange;
 }

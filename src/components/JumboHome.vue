@@ -14,7 +14,7 @@ export default {
         <div class="text-light">
             <div class="position-absolute top-50 start-0 translate-middle-y jumbo">
                 <h2 class=""><span class="grey-color">I'm a </span>Full-Stack</h2>
-                <h1>Web <span><span class="orange-color">Dev</span>eloper</span></h1>
+                <h1 class="text-light text-decoration-none"><span class="orange-color border-bottom">Web Dev</span>eloper</h1>  
             </div>
         </div>
     </div>
@@ -25,12 +25,14 @@ export default {
 @use '../assets/scss/partials/commons' as *;
 
 h1 {
-    font-family: 'Play', sans-serif;
+    /*     font-family: 'Play', sans-serif; */
     font-size: 7rem;
+    font-family: 'Bricolage Grotesque', sans-serif;
 }
 
 h2 {
-    font-family: 'Play', sans-serif;
+    /* font-family: 'Play', sans-serif; */
+    font-family: 'Bricolage Grotesque', sans-serif;
 }
 
 .jumbo {
