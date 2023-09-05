@@ -15,9 +15,9 @@ export default {
                 <!-- Menu right -->
                 <div class="col-6">
                     <ul class="d-none grey-color d-sm-flex justify-content-end ls-none">
-                        <a class="a-hover">Works</a>
+                        <a class="a-hover">Projects</a>
                         <a class="a-hover">About</a>
-                        <a class="orange-color fw-bold">nicola.faedo@gmail.com</a>
+                        <a class="main-color fw-bold">nicola.faedo@gmail.com</a>
                     </ul>
                 </div>
             </div>

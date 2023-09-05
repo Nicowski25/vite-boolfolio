@@ -5,34 +5,57 @@ export default {
 </script>
 
 <template>
-    <div class="d-flex flex-column vh-90 position-relative">
-        <!-- Name middle -->
-        <div class="d-flex justify-content-center align-items-center py-4">
-            <h4 class="grey-color">Hi, I'm <span class="fw-bold orange-color">Nicola!</span></h4>
+    <!-- Name middle -->
+    <section>
+        <h1 class="text-center name-style grey-color pt-3">Hi, I'm <span class="main-color">Nicola</span>!</h1>
+        <div class="d-flex flex-column align-items-start justify-content-center ps-4 vh-90">
+            <h1 class="webdev">WEB</h1>
+            <h1 class="fullstack">FULL-STACK</h1>
+            <h1 class="webdev">DEVELOPER</h1>
         </div>
-        <!-- main writings -->
-        <div class="text-light">
-            <div class="position-absolute top-50 start-0 translate-middle-y jumbo">
-                <h2 class=""><span class="grey-color">I'm a </span>Full-Stack</h2>
-                <h1 class="text-light text-decoration-none"><span class="orange-color border-bottom">Web Dev</span>eloper</h1>  
-            </div>
-        </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
 @use '../assets/scss/partials/commons' as *;
 
-h1 {
-    /*     font-family: 'Play', sans-serif; */
-    font-size: 7rem;
-    font-family: 'Bricolage Grotesque', sans-serif;
+.name-style {
+    font-size: 2rem;
+    margin-bottom: -4rem;
 }
 
-h2 {
-    /* font-family: 'Play', sans-serif; */
-    font-family: 'Bricolage Grotesque', sans-serif;
+.webdev {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 7rem;
+    color: transparent;
+    color: $medium-sea;
+    z-index: 1;
+    text-shadow:
+        8px 0px 0px $background,
+        /* Right shadow */
+        -8px 0px 0px $background,
+        /* Left shadow */
+        0px 8px 0px $background,
+        /* Bottom shadow */
+        0px -8px 0px $background;
+}
+
+.fullstack {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11rem;
+    margin-top: -5rem;
+    margin-bottom: -5rem;
+    color: #242424;
+    text-shadow:
+        1px 0px 0px $medium-sea,
+        /* Right shadow */
+        -1px 0px 0px $medium-sea,
+        /* Left shadow */
+        0px 1px 0px $medium-sea,
+        /* Bottom shadow */
+        0px -1px 0px $medium-sea;
 }
 
 .jumbo {
@@ -42,10 +65,6 @@ h2 {
 @media (max-width: 576px) {
     .jumbo {
         margin-left: 1rem;
-
-        h1 {
-            font-size: 4.5rem;
-        }
     }
 }
 </style>

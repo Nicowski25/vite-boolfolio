@@ -59,16 +59,18 @@ export default {
 }
 </script>
 <template>
-    <section v-if="projects" class="w-100 p-3">
+    <section v-if="projects" class="w-100 bg-projects">
+        <!-- introduction title -->
         <div class="d-flex flex-column align-items-center my-5">
-            <!-- introduction title -->
-            <h1 class="border-bot mb-1">PROJECTS</h1>
-            <p class="text-center grey-color fs-4">This is my web project gallery, where you'll find a collection of my most
+            <h1 class="project-title mb-1 py-3">PROJECTS</h1>
+            <p class="text-center grey-color fs-4">This is my web project gallery, here you'll find my most
                 recent and creative works.</p>
         </div>
+        <!-- projects container -->
         <div class="container m-auto">
             <div class="my-2 d-flex align-items-center card-height">
 
+                <!-- card of the slider -->
                 <div class="h-100 w-100 card" v-show="projects.length > 0" @mouseenter="stopAutoChangeSlide"
                     @mouseleave="startAutoChangeSlide">
                     <div class="row h-100 d-flex align-items-center">
@@ -77,22 +79,33 @@ export default {
                             <img :src="getImageFromPath(projects[currentProjectIndex].image)">
                         </div>
                         <!-- card text -->
-                        <div class="col-4">
+                        <div class="col-12 col-sm-4 ps-2 mb-3">
                             <div class="card-body p-2">
-                                <h2 class="fw-bold orange-color">{{ projects[currentProjectIndex].title }}</h2>
-                                <p class="badge rounded-pill text-bg-primary m-0">{{ projects[currentProjectIndex].status }}
+                                <h2 class="fw-bold main-color">{{ projects[currentProjectIndex].title }}</h2>
+                                <!-- badges project-type -->
+                                <p class="badge rounded-pill p-1 text-bg-success m-0">
+                                    <div v-if="projects[currentProjectIndex].type_id == '1'">
+                                        Front-end
+                                    </div>
+                                    <div v-else-if="projects[currentProjectIndex].type_id == '2'">
+                                        Back-end
+                                    </div>
+                                    <div v-else="projects[currentProjectIndex].type_id == '3'">
+                                        Full-Stack
+                                    </div>
                                 </p>
+                                <!-- !badges project-type -->
                                 <p> {{ trucateText(projects[currentProjectIndex].description) }} </p>
-                                <p><strong>Expected weeks duration:</strong> {{ projects[currentProjectIndex].duration }}
+                                <p><strong>Weeks duration:</strong> {{ projects[currentProjectIndex].duration }}
                                 </p>
-                                <p><strong>Start Date:</strong> {{ projects[currentProjectIndex].start_date }}</p>
+                                <a :href="projects[currentProjectIndex].repositoryUrl" target="_blank"><strong>Github Repository</strong> </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <!-- /card of slider -->
             </div>
-            <!-- slider -->
+            <!-- slider nav -->
             <div class="slider_navi px-2 col-sm-12 d-flex justify-content-center">
                 <div v-for="(project, index) in projects" :key="index">
                     <a @click.prevent="currentProjectIndex = index" class="slider-item"
@@ -108,8 +121,20 @@ export default {
 @use '../assets/scss/partials/variables' as *;
 @use '../assets/scss/partials/commons' as *;
 
+.bg-projects {
+    background-color: rgba(26, 25, 25, 0.75);
+    box-shadow: rgba(43, 42, 42, 0.521) 0px -50px 36px -28px inset;
+}
+
 .card-height {
-    height: 400px;
+    height: 500px;
+}
+
+@media screen and (min-width: 576px) {
+    .card-height {
+        height: 400px;
+    }
+
 }
 
 .card {
@@ -122,22 +147,24 @@ export default {
     padding: 15px;
 
     h3 {
-        color: $orange;
+        color: $main;
     }
 }
 
-h1 {
-    /* font-family: 'Play', sans-serif;  */
+.card-body {
+    p, a {
+        padding-top: 1rem;
+    }
+}
+.project-title {
+    color: white;
     font-size: 3rem;
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    width: 70%;
     text-align: center;
     margin-bottom: 3rem;
-    color: white;
-}
-
-.border-bot {
-    width: 70%;
-    border-bottom: 1px solid $orange;
+    border-bottom: 1px solid $main;
 }
 
 img {
@@ -155,17 +182,7 @@ img {
     background-color: rgba(255, 255, 255, 0.507);
 
     &.active-slide {
-        background-color: $orange;
+        background-color: $main;
     }
-}
-
-.slide-transition-enter-active,
-.slide-transition-leave-active {
-    transition: opacity 0.5s;
-}
-
-.slide-transition-enter,
-.slide-transition-leave-to {
-    opacity: 0.5;
 }
 </style>
