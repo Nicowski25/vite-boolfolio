@@ -10,7 +10,7 @@ export default {
             <div class="row justify-content-between align-items-center">
                 <!-- Logo left -->
                 <div class="col-12 col-sm-6 text-center text-sm-start">
-                    <img src="/logoinitials.png" style="width: 80px;" alt="">
+                    <img src="../assets/img/logoinitials.png" style="width: 80px;" alt="">
                 </div>
                 <!-- Menu right -->
                 <div class="col-6">
