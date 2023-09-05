@@ -1,0 +1,71 @@
+<script>
+export default {
+    name: 'LogoSlider',
+    data() {
+        return {
+            images: [
+                'nodejs.svg',
+                'mysql.svg',
+                'css.svg',
+                'Git.png',
+                'HTML5.png',
+                'javascript.png',
+                'vuejs.png',
+                'laravel.svg.png',
+                'php.png',
+                'bootstrap.svg',
+                'phpmyadmin.ico',
+                'npm.svg'
+            ],
+        };
+    },
+};
+
+</script>
+
+<template>
+    <section>
+        <!-- TITLE -->
+        <div class="d-flex flex-column align-items-center my-5">
+            <h1 class="section-title mb-1 py-3">TECHNOLOGIES</h1>
+            <p class="text-center grey-color fs-4">These are the tools and technologies I utilize in my works.</p>
+        </div>
+        <!-- SLIDER -->
+        <div class="slider-container">
+            <div class="slider" ref="slider">
+                <div class="slide" v-for="(image, index) in images" :key="index">
+                    <img :src="(`src/assets/img/${image}`)" alt="Slide" class="slide-img" />
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+
+<style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+@use '../assets/scss/partials/commons' as *;
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 8%;
+}
+
+img {
+    max-width: 90px;
+    height: auto;
+}
+</style>
