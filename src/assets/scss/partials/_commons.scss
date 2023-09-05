@@ -1,13 +1,16 @@
 @use './variables' as *;
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&family=Raleway:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+ 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Ubuntu';
     //font-family: 'Raleway';
 //    font-family: 'Silkscreen', cursive;
 }
@@ -24,6 +27,6 @@
     color: $grey1;
 }
 
-.orange-color {
-    color: $orange;
+.main-color {
+    color: $medium-sea;
 }
