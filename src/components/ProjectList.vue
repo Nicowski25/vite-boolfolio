@@ -79,26 +79,28 @@ export default {
                             <img :src="getImageFromPath(projects[currentProjectIndex].image)">
                         </div>
                         <!-- card text -->
-                        <div class="col-12 col-sm-4 ps-2 mb-3">
+                        <div class="col-12 col-sm-4 mb-3">
                             <div class="card-body p-2">
-                                <h2 class="fw-bold main-color">{{ projects[currentProjectIndex].title }}</h2>
+                                <h2 class="fw-bold main-color text-center text-md-start">{{
+                                    projects[currentProjectIndex].title }}</h2>
                                 <!-- badges project-type -->
-                                <p class="badge rounded-pill p-1 text-bg-success m-0">
-                                    <div v-if="projects[currentProjectIndex].type_id == '1'">
-                                        Front-end
-                                    </div>
-                                    <div v-else-if="projects[currentProjectIndex].type_id == '2'">
-                                        Back-end
-                                    </div>
-                                    <div v-else="projects[currentProjectIndex].type_id == '3'">
-                                        Full-Stack
-                                    </div>
+                                <p class="badge rounded-pill py-1 px-2 text-bg-success m-0">
+                                <div v-if="projects[currentProjectIndex].type_id == '1'">
+                                    Front-end
+                                </div>
+                                <div v-else-if="projects[currentProjectIndex].type_id == '2'">
+                                    Back-end
+                                </div>
+                                <div v-else="projects[currentProjectIndex].type_id == '3'">
+                                    Full-Stack
+                                </div>
                                 </p>
                                 <!-- !badges project-type -->
+
                                 <p> {{ trucateText(projects[currentProjectIndex].description) }} </p>
-                                <p><strong>Weeks duration:</strong> {{ projects[currentProjectIndex].duration }}
-                                </p>
-                                <a :href="projects[currentProjectIndex].repositoryUrl" target="_blank"><strong>Github Repository</strong> </a>
+
+                                <a :href="projects[currentProjectIndex].repositoryUrl" target="_blank"><strong>Github
+                                        Repository</strong> </a>
                             </div>
                         </div>
                     </div>
@@ -130,12 +132,6 @@ export default {
     height: 500px;
 }
 
-@media screen and (min-width: 576px) {
-    .card-height {
-        height: 400px;
-    }
-
-}
 
 .card {
     color: rgb(221, 198, 198);
@@ -152,10 +148,14 @@ export default {
 }
 
 .card-body {
-    p, a {
+
+    p {
         padding-top: 1rem;
+        padding-bottom: 1rem;
     }
+
 }
+
 .project-title {
     color: white;
     font-size: 3rem;
@@ -184,5 +184,13 @@ img {
     &.active-slide {
         background-color: $main;
     }
+}
+
+/* MOBILE DEVICE MEDIAQUERY */
+@media screen and (min-width: 576px) {
+    .card-height {
+        height: 400px;
+    }
+
 }
 </style>
