@@ -30,3 +30,14 @@
 .main-color {
     color: $medium-sea;
 }
+
+.section-title {
+    color: white;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid $main;
+}

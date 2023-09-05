@@ -62,7 +62,7 @@ export default {
     <section v-if="projects" class="w-100 bg-projects">
         <!-- introduction title -->
         <div class="d-flex flex-column align-items-center my-5">
-            <h1 class="project-title mb-1 py-3">PROJECTS</h1>
+            <h1 class="section-title mb-1 py-3">PROJECTS</h1>
             <p class="text-center grey-color fs-4">This is my web project gallery, here you'll find my most
                 recent and creative works.</p>
         </div>
@@ -75,11 +75,11 @@ export default {
                     @mouseleave="startAutoChangeSlide">
                     <div class="row h-100 d-flex align-items-center">
                         <!-- card image -->
-                        <div class="col-12 col-sm-8 ">
+                        <div class="col-12 col-md-8 ">
                             <img :src="getImageFromPath(projects[currentProjectIndex].image)">
                         </div>
                         <!-- card text -->
-                        <div class="col-12 col-sm-4 mb-3">
+                        <div class="col-12 col-md-4 mb-3">
                             <div class="card-body p-2">
                                 <h2 class="fw-bold main-color text-center text-md-start">{{
                                     projects[currentProjectIndex].title }}</h2>
@@ -154,17 +154,6 @@ export default {
         padding-bottom: 1rem;
     }
 
-}
-
-.project-title {
-    color: white;
-    font-size: 3rem;
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
-    width: 70%;
-    text-align: center;
-    margin-bottom: 3rem;
-    border-bottom: 1px solid $main;
 }
 
 img {
