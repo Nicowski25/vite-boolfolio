@@ -16,7 +16,7 @@ export default {
 @use '../assets/scss/partials/commons' as *;
 
 .bg {
-    background-color: $greywhite;
+    background-color: #1b1b1b;
 }
 
 </style>

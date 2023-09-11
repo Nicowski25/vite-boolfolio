@@ -59,7 +59,7 @@ export default {
 }
 </script>
 <template>
-    <section v-if="projects" class="w-100 bg-projects">
+    <section id="projects" v-if="projects" class="w-100 bg-projects">
         <!-- introduction title -->
         <div class="d-flex flex-column align-items-center my-5">
             <h1 class="section-title mb-1 py-3">PROJECTS</h1>

@@ -6,11 +6,11 @@ export default {
 
 <template>
     <!-- Name middle -->
-    <section>
+    <section id="home">
         <h1 class="text-center name-style grey-color pt-3">Hi, I'm <span class="main-color">Nicola</span>!</h1>
         <div class="d-flex flex-column align-items-center justify-content-center ps-4 vh-90">
             <h1 class="webdev">WEB</h1>
-            <h1 class="fullstack">FULL <span class="d-none d-md-inline-block">-</span>STACK</h1>
+            <h1 class="fullstack">FULL <span class="d-none d-sm-inline-block">-</span>STACK</h1>
             <h1 class="webdev">DEVELOPER</h1>
         </div>
     </section>
@@ -107,5 +107,5 @@ export default {
             /* Bottom shadow */
             0px -1px 0px $medium-sea;
     }
-
-}</style>
+}
+</style>
