@@ -24,15 +24,15 @@ export default {
 </script>
 
 <template>
-    <section>
+    <section id="toolset">
         <!-- TITLE -->
         <div class="d-flex flex-column align-items-center my-5">
-            <h1 class="section-title mb-1 py-3">TECHNOLOGIES</h1>
+            <h1 class="section-title mb-1 py-3">TOOLSET</h1>
             <p class="text-center grey-color fs-4">These are the tools and technologies I utilize in my works.</p>
         </div>
         <!-- SLIDER -->
         <div class="slider-container">
-            <div class="slider" ref="slider">
+            <div class="slider">
                 <div class="slide" v-for="(image, index) in images" :key="index">
                     <img :src="(`src/assets/img/${image}`)" alt="Slide" class="slide-img" />
                 </div>
@@ -49,12 +49,15 @@ export default {
 .slider-container {
     width: 100%;
     overflow: hidden;
+
 }
 
 .slider {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;    
 }
 
 .slide {
@@ -67,5 +70,13 @@ export default {
 img {
     max-width: 90px;
     height: auto;
+}
+
+@media (max-width: 576px) {
+    .slider {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
 </style>

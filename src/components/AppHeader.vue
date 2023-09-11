@@ -10,14 +10,14 @@ export default {
             <div class="row justify-content-between align-items-center">
                 <!-- Logo left -->
                 <div class="col-12 col-sm-6 text-center text-sm-start">
-                    <img src="../assets/img/logoinitials.png" style="width: 80px;" alt="">
+                    <img src="../assets/img/logoinitials.png" style="width: 80px;" href="#home">
                 </div>
                 <!-- Menu right -->
                 <div class="col-6">
                     <ul class="d-none grey-color d-sm-flex justify-content-end ls-none">
-                        <a class="a-hover">Projects</a>
-                        <a class="a-hover">About</a>
-                        <a class="main-color fw-bold">nicola.faedo@gmail.com</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#toolset">Toolset</a>
+                        <a class="main-color fw-bold" href="#send-message">nicola.faedo@gmail.com</a>
                     </ul>
                 </div>
             </div>
@@ -33,7 +33,7 @@ a {
     padding-right: 2rem;
     text-decoration: none;
     color: $grey1;
-    .a-hover:hover {
+    &:hover {
         color: white;
     }
 }
