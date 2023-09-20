@@ -5,7 +5,7 @@ export default {
     components: {},
     data() {
         return {
-            base_url: 'http://127.0.0.1:8000/',
+            base_url: 'https://admin.nicolafaedo.it/',
             mail_API: 'api/contacts',
             name: '',
             email: '',

@@ -4,7 +4,7 @@ export default {
     name: 'ProjectList',
     data() {
         return {
-            base_url: 'http://127.0.0.1:8000/',
+            base_url: 'https://admin.nicolafaedo.it/',
             projects_API: 'api/projects',
             loading: true,
             projects: null,
