@@ -58,7 +58,8 @@ export default {
     align-items: center;
     justify-content: center;
     padding-top: 2rem;
-    padding-bottom: 2rem;   
+    padding-bottom: 2rem;
+    width: 100%;   
 }
 
 .slide {
@@ -74,7 +75,7 @@ img {
     height: auto;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1195px) {
     .slider {
         column-count: 2;
         display: inline-block;

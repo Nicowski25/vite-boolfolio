@@ -62,7 +62,7 @@ export default {
 }
 
 /* MOBILE DEVICES MEDIAQUERY */
-@media (max-width: 576px) {
+@media (max-width: 1195px) {
     .jumbo {
         margin-left: 1rem;
     }
