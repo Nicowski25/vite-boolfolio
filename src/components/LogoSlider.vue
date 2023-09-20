@@ -49,7 +49,8 @@ export default {
 .slider-container {
     width: 100%;
     overflow: hidden;
-
+    display: flex;
+    justify-content: center;
 }
 
 .slider {
@@ -57,7 +58,7 @@ export default {
     align-items: center;
     justify-content: center;
     padding-top: 2rem;
-    padding-bottom: 2rem;    
+    padding-bottom: 2rem;   
 }
 
 .slide {
@@ -65,6 +66,7 @@ export default {
     justify-content: center;
     flex-shrink: 0;
     width: 8%;
+    margin: auto;
 }
 
 img {
@@ -74,9 +76,12 @@ img {
 
 @media (max-width: 576px) {
     .slider {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        column-count: 2;
+        display: inline-block;
+        gap: 3rem; 
+    }
+    .slide {
+        margin-top: 1.5rem;
     }
 }
 </style>
