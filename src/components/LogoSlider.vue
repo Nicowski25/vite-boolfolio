@@ -34,7 +34,7 @@ export default {
         <div class="slider-container">
             <div class="slider">
                 <div class="slide" v-for="(image, index) in images" :key="index">
-                    <img :src="(`/src/assets/img/${image}`)" alt="Slide" class="slide-img" />
+                    <img :src="(`../assets/img/${image}`)" alt="Slide" class="slide-img" />
                 </div>
             </div>
         </div>
