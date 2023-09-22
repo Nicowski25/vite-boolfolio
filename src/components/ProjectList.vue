@@ -22,7 +22,7 @@ export default {
         },
         getImageFromPath(path) {
             //console.log(this.base_url + 'storage/' + path);
-            return this.base_url + 'public/storage/public/uploads' + path;
+            return this.base_url + 'public/storage' + path;
         },
         autoChangeSlide() {
             if (this.currentProjectIndex < this.projects.length - 1) {
