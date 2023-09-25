@@ -58,7 +58,7 @@ export default {
                     <img src="../assets/img/vuejs.png" alt="Slide" class="slide-img" />
                 </div>
                 <div class="slide">
-                    <img src="../assets/img/laravel.svg.png" alt="Slide" class="slide-img" />
+                    <img src="../assets/img/Laravel.svg.png" alt="Slide" class="slide-img" />
                 </div>
                 <div class="slide">
                     <img src="../assets/img/php.png" alt="Slide" class="slide-img" />
