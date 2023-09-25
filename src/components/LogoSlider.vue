@@ -33,8 +33,44 @@ export default {
         <!-- SLIDER -->
         <div class="slider-container">
             <div class="slider">
-                <div class="slide" v-for="(image, index) in images" :key="index">
+<!--                 <div class="slide" v-for="(image, index) in images" :key="index">
                     <img :src="import(`@/assets/img/${image}`)" alt="Slide" class="slide-img" />
+                </div> -->
+                <div class="slide">
+                    <img src="../assets/img/nodejs.svg" alt="Slide" class="slide-img" />
+                </div>
+                <div class="slide">
+                    <img src="../assets/img/mysql.svg" alt="Slide" class="slide-img" />
+                </div>
+                <div class="slide">
+                    <img src="../assets/img/css.svg" alt="Slide" class="slide-img" />
+                </div>
+                <div class="slide">
+                    <img src="../assets/img/Git.png" alt="Slide" class="slide-img" />
+                </div>
+                <div class="slide">
+                    <img src="../assets/img/HTML5.png" alt="Slide" class="slide-img" />
+                </div>
+                <div class="slide">
+                    <img src="../assets/img/javascript.png" alt="Slide" class="slide-img" />
+                </div>
+                <div class="slide">
+                    <img src="../assets/img/vuejs.png" alt="Slide" class="slide-img" />
+                </div>
+                <div class="slide">
+                    <img src="../assets/img/laravel.svg.png" alt="Slide" class="slide-img" />
+                </div>
+                <div class="slide">
+                    <img src="../assets/img/php.png" alt="Slide" class="slide-img" />
+                </div>
+                <div class="slide">
+                    <img src="../assets/img/bootstrap.svg" alt="Slide" class="slide-img" />
+                </div>
+                <div class="slide">
+                    <img src="../assets/img/phpmyadmin.ico" alt="Slide" class="slide-img" />
+                </div>
+                <div class="slide">
+                    <img src="../assets/img/npm.svg" alt="Slide" class="slide-img" />
                 </div>
             </div>
         </div>
