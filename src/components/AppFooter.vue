@@ -24,7 +24,7 @@ export default {
         font-size: 0.7rem;
     }
     section {
-        padding-bottom: 2.5rem;
+        padding-bottom: 4.5rem;
     }
 }
 </style>
