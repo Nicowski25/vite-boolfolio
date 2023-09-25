@@ -23,5 +23,8 @@ export default {
     p {
         font-size: 0.7rem;
     }
+    section {
+        padding-bottom: 2.5rem;
+    }
 }
 </style>
