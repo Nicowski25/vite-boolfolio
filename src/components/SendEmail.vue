@@ -54,7 +54,7 @@ export default {
                 possible.</p>
         </div>
         <!-- alert success -->
-        <div v-if="success" class="alert alert-success text-start px-5 mx-5" role="alert">
+        <div v-if="success" class="alert alert-success text-start px-2 mx-5" role="alert">
             <strong>Message sent successfully!</strong>
         </div>
         
